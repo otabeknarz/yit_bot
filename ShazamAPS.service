@@ -1,0 +1,12 @@
+[Unit]
+After=network.target
+Description=ShazamBot linklarni update qiluvchi service.
+
+[Service]
+Type=simple
+WorkingDirectory=/root/bots/Shazam
+ExecStart=/root/bots/Shazam/env/bin/python scheduler.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

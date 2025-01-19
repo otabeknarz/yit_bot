@@ -1,0 +1,12 @@
+[Unit]
+After=network.target
+Description=ShazamBot uchun asosiy servis.
+
+[Service]
+Type=simple
+WorkingDirectory=/root/bots/Shazam
+ExecStart=/root/bots/Shazam/env/bin/python app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

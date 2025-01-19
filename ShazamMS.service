@@ -1,0 +1,12 @@
+[Unit]
+After=network.target
+Description=ShazamBot uchun xabar yuborish servisi.
+
+[Service]
+Type=simple
+WorkingDirectory=/root/bots/Shazam
+ExecStart=/root/bots/Shazam/env/bin/python mailing.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
