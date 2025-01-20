@@ -17,6 +17,7 @@ import random
 def download_youtube_video(video_url: str, user_id: str) -> dict | None:
     seed = random.randint(10, 100)
     yt_dlp_options = {
+        "cookiefile": "www.youtube.com_cookies.txt",
         "quiet": True,
         "noprogress": True,
         "no_warnings": True,
@@ -222,7 +223,7 @@ class VideoDownloader:
         try:
             ydl_opts = yt_dlp.YoutubeDL(
                 {
-                    "cookiefile": "/root/cookies.txt",
+                    "cookiefile": "www.youtube.com_cookies.txt",
                     "quiet": True,
                     "noprogress": True,
                     "no_warnings": True,
