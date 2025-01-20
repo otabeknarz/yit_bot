@@ -85,7 +85,7 @@ class Music(object):
     def check_availability(self):
         try:
             options = {
-                "cookiefile": "www.youtube.com_cookies.txt",
+                "cookiefile": "cookies.txt",
                 "quiet": True,
                 "noprogress": True,
                 "no_warnings": True,
@@ -116,7 +116,7 @@ class Music(object):
         try:
             ydl = yt_dlp.YoutubeDL(
                 {
-                    "cookiefile": "www.youtube.com_cookies.txt",
+                    "cookiefile": "cookies.txt",
                     "quiet": True,
                     "noprogress": True,
                     "no_warnings": True,

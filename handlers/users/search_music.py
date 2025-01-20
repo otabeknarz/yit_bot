@@ -41,7 +41,7 @@ def search_yt_dlp(query: str, limit: int = 15, duration_limit: int = 900) -> lis
 
     # yt-dlp options for searching no to download the video
     search_yt_dlp_options = {
-        "cookiefile": "www.youtube.com_cookies.txt",
+        "cookiefile": "cookies.txt",
         "quiet": True,
         "skip_download": True,
         "noplaylist": True,
